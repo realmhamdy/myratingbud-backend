@@ -16,7 +16,7 @@ urlpatterns = [
     # User management
     path("users/", include("users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    path("products", include("products.urls", namespace="products")),
+    path("products/", include("products.urls", namespace="products")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
