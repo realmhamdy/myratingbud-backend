@@ -1,0 +1,4 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/d/Projects/myratingbud_backend/.venv/bin/python3.8"
+}
