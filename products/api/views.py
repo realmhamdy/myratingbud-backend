@@ -35,3 +35,11 @@ class RateProductView(views.APIView):
         else:
             DISPLAY_LARGE_IMAGE = True
         return response.Response(product_data)
+
+
+class CompareProductsView(views.APIView):
+
+    def get(self, request, **kwargs):
+        product_urls = self.request.query_params["urls"]
+        compared_products = [PRODUCT_DATA for _ in range(6)]
+        return response.Response(compared_products)
