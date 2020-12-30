@@ -40,6 +40,6 @@ class RateProductView(views.APIView):
 class CompareProductsView(views.APIView):
 
     def get(self, request, **kwargs):
-        product_urls = self.request.query_params["urls"]
+        product_urls = self.request.query_params.getlist("urls")
         compared_products = [PRODUCT_DATA for _ in range(6)]
         return response.Response(compared_products)
